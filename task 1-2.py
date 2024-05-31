@@ -1,44 +1,16 @@
-def counting_sort_strings(arr, temp, ascending=True):
-    count = {s: 0 for s in temp}
-    for s in arr:
-        count[s] += 1
+# This is a sample Python script.
 
-    new_arr = []
-    if ascending:
-        for s in temp:
-            new_arr.extend([s] * count[s])
-    else:
-        for s in reversed(temp):
-            new_arr.extend([s] * count[s])
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-    return new_arr
 
-def test():
-    # Тест 1: Массив строк разных длин
-    template1 = ["apple", "banana", "cherry", "date"]
-    arr1 = ["banana", "apple", "cherry", "banana", "date", "apple", "cherry"]
-    assert counting_sort_strings(arr1, template1) == ["apple", "apple", "banana", "banana", "cherry", "cherry", "date"]
-    print("Тест 1 пройден")
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-    # Тест 2: Строки на разных языках
-    template2 = ["привет", "здравствуйте", "hello", "bonjour"]
-    arr2 = ["hello", "привет", "bonjour", "здравствуйте", "привет", "hello"]
-    assert counting_sort_strings(arr2, template2) == ["привет", "привет", "здравствуйте", "hello", "hello", "bonjour"]
-    print("Тест 2 пройден")
 
-    # Тест 3: Пустой массив
-    template3 = ["apple", "banana", "cherry"]
-    arr3 = []
-    assert counting_sort_strings(arr3, template3) == []
-    print("Тест 3 пройден")
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
 
-    # Тест 4: Сортировка по убыванию
-    template4 = ["apple", "banana", "cherry", "date"]
-    arr4 = ["banana", "apple", "cherry", "banana", "date", "apple", "cherry"]
-    assert counting_sort_strings(arr4, template4, ascending=False) == ["date", "cherry", "cherry", "banana", "banana",
-                                                                       "apple", "apple"]
-    print("Тест 4 пройден")
-
-    print("Все тесты пройдены успешно!")
-
-test()
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
